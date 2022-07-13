@@ -1,0 +1,14 @@
+@media (max-width: 630px) {
+    #top-bar{
+        top: unset !important;
+        bottom: 0;
+    }
+    .project{
+        width: 100% !important;
+    }
+}
+@media (max-width: 854px) {
+    li.project{
+        width: 47% ;
+    }
+}

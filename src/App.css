@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+.main {
+  padding-top: 200px;
+}
+#top-bar {
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  z-index: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-item {
+  text-transform: uppercase;
+}
+.nav-item-link {
+  padding: 10px 24px;
+  min-height: 36px;
+  margin-right: 2px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.mail-link:hover,
+.focus,
+.nav-item-link:hover {
+  color: var(--bs-gray);
+  background-color: #f6f6f6;
+  font-weight: bold;
+}
+.intro {
+  line-height: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hidden {
+  display: none;
+}
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+.projects-container {
+  background-color: #f5f4fc;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.project {
+  height: 300px;
+  width: 32%;
+  border-radius: 0.2rem;
+  background-color: #fff;
+  box-shadow: 0px 8px 6px -6px rgba(235, 234, 242, 0.58);
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition-property: transform, box-shadow;
+  
+}
+.project:hover {
+  transform: translate(0px, -10px);
+  box-shadow: 2px 4px 4px 4px rgba(235, 234, 242, 0.58);
+}
+.project__logo {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: rgba(245, 244, 252, 0.62);
+}
+.project__logo-wrapper {
+  display: flex;
+  align-items: center;
+  height: 180px;
+}
+.project__logo-img {
+  height: 60px;
+}
+.project__info {
+  padding: 1rem;
+}
+.feature-project {
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+.feature-project:hover {
+  background-color: #f7f7f7;
+  border-color: #d9d9d9;
+}
+/*  */
+.github-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+}
+.github-link:hover {
+  background-color: #ddd;
+}
+.mail-link {
+  border: 1px solid #eaeaea;
+  padding: 0.4rem 0.8rem;
+  border-radius: 100px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon-github {
+  background: url('./assets/svg/icon-social-github.svg');
 }
+.divider {
+  display: inline-block;
+  width: 100%;
+  height: 6px;
+  background: url('./assets/svg/divider.svg');
+}
+@import url('./css/mobile.css');
