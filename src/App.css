@@ -26,9 +26,10 @@
 }
 .intro {
   line-height: 2rem;
+  text-align: justify;
 }
 
-.hidden {
+.hidden, .menu-container {
   display: none;
 }
 .visuallyhidden {

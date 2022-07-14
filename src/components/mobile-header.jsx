@@ -1,0 +1,32 @@
+import { useState } from 'react';
+import { propTypes } from 'react-bootstrap/esm/Image';
+import { Link } from 'react-router-dom';
+import { CloseMenuIcon, MenuIcon } from '../assets/svg';
+import Backdrop from './backdrop';
+import Menu from './menu';
+
+function MobileHeader(props) {
+  const [menu, setMenu] = useState(false);
+  function closeMenu() {
+    setMenu(false)
+  }
+  return (
+    <div className={props.className}>
+      <Link to='/' className='col-3'>
+        image
+      </Link>
+      <button
+        className='menu-btn'
+        onClick={() => {
+          setMenu(!menu);
+        }}
+      >
+        {menu ? <CloseMenuIcon /> : <MenuIcon />}
+      </button>
+      <Menu close={closeMenu} className={menu && 'menu slide'} />
+      <Backdrop onClick={closeMenu} className={menu && 'backdrop slide'} />
+    </div>
+  );
+}
+
+export default MobileHeader;

@@ -45,20 +45,20 @@ function Home() {
             </div>
 
             <span className='divider my-5'></span>
-            <div class=' p-0 mt-4 '>
+            <div className=' mt-4  '>
               <h4 className='h3 '>Featured projects</h4>
-              <p class=''>
+              <p className=''>
                 A collection of some side projects that i have shipped recently.
               </p>
             </div>
-              <ul className='p-0 mb-5'>
+              <ul className=' mb-5'>
                 <li>
                   <a
                     target='_blank'
                     rel='noopener noreferrer'
                     href='https://don-remolo.netlify.app'
                     aria-label='don-remolo live demo.'
-                    className='feature-project d-flex align-items-center p-4 mb-2'
+                    className='feature-project d-flex flex-column flex-lg-row align-items-center  p-4 mb-2'
                   >
                     <figure className=' d-flex align-items-center me-4'>
                       <span aria-hidden='true'>
@@ -87,9 +87,9 @@ function Home() {
                     rel='noopener noreferrer'
                     href='https://don-remolo.netlify.app'
                     aria-label='don-remolo live demo.'
-                    className='feature-project d-flex align-items-center p-4 mb-2'
+                    className='feature-project d-flex flex-column flex-lg-row align-items-center  p-4 mb-2'
                   >
-                    <figure className='project__logo d-flex align-items-center me-4'>
+                    <figure className=' d-flex align-items-center me-4'>
                       <span aria-hidden='true'>
                         <img
                           src={donLogo}
@@ -110,6 +110,7 @@ function Home() {
                     </span>
                   </a>
                 </li>
+                
               </ul>
           </div>
         </div>
