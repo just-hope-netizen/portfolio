@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
+    z-index: 1;
   }
   div.pc-header {
     display: none;
@@ -16,16 +17,15 @@
   main.main {
     padding-top: 120px;
   }
-  .nav-item, .switch-container.mobile {
+  .nav-item,
+  .switch-container.mobile {
     margin: 20px;
   }
-  #light .menu{
-      background-color: #000;
-      
-    }
-    #dark .menu{
-      background-color: #fff;
-      
+  #light .menu {
+    background-color: #fff;
+  }
+  #dark .menu {
+    background-color: #000;
   }
   .menu {
     left: 100%;
@@ -40,13 +40,12 @@
     right: 1rem;
     z-index: 1;
   }
-  .nav-item-link {
-    /* color: #ccf381; */
-  }
+
   .focus {
     background: none !important;
-    /* color: #fff !important; */
+    border-bottom: 2px solid #222;
   }
+
   .backdrop {
     position: fixed;
     top: 0;

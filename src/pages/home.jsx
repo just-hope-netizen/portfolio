@@ -1,9 +1,7 @@
 import donLogo from '../assets/image/don-remolo.png';
 function Home() {
   return (
-    <>
-      <main className='main'>
-        <div className='container px-md-5'>
+        <main className='main container px-md-5'>
           <div className='row mx-md-5 pb-5'>
             <small>Hi, my name is</small>
             <h1>Hope Peter</h1>
@@ -44,9 +42,9 @@ function Home() {
               </ul>
             </div>
 
-            <span className='divider my-5'></span>
+            <span className='divider my-5 px-sm-1'></span>
             <div className=' mt-4  '>
-              <h4 className='h3 '>Featured projects</h4>
+              <h4 className='h3  feature-projects-heading'>Featured projects</h4>
               <p className=''>
                 A collection of some side projects that i have shipped recently.
               </p>
@@ -113,9 +111,7 @@ function Home() {
                 
               </ul>
           </div>
-        </div>
-      </main>
-    </>
+        </main>
   );
 }
 

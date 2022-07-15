@@ -4,7 +4,7 @@ function Projects() {
   return (
     <main className='projects-container main container-fluid'>
       <header className='page-header row text-center'>
-        <h1 aria-label='work.' className='page-header__heading'>
+        <h1 aria-label='work.' className='projects-heading'>
           <span aria-hidden='true'>
             <span>/</span>Projects<span>.</span>
           </span>
@@ -19,7 +19,7 @@ function Projects() {
           aria-label='projects'
           className='projects d-flex  flex-wrap justify-content-between align-items-center p-3 my-3'
         >
-          <li className='project m-1 '>
+          <li className='project m-1 mb-sm-2 '>
             <a
               target='_blank'
               rel='noopener noreferrer'
