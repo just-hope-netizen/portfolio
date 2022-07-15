@@ -4,7 +4,7 @@ function Home() {
     <>
       <main className='main'>
         <div className='container px-md-5'>
-          <div className='row mx-md-5 mb-5'>
+          <div className='row mx-md-5 pb-5'>
             <small>Hi, my name is</small>
             <h1>Hope Peter</h1>
             <p className='intro'>

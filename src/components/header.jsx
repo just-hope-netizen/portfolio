@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import ReactSwitch from 'react-switch';
 import MobileHeader from './mobile-header';
 import Nav from './nav';
 
-function Header() {
+function Header(props) {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -41,19 +42,31 @@ function Header() {
         }`}
         id='top-bar'
       >
-        <div className='row py-3 pc-header'>
+        <div className='row py-3 pc-header '>
           <div className='col-6'>
             <div className='row'>
               <Link to='/' className='col-3'>
                 image
               </Link>
-              <div className='col-3'>window</div>
+              <div className='col-3'>
+                <ReactSwitch
+                  onChange={props.switch}
+                  onColor={'#ddd'}
+                  onHandleColor={'#000'}
+                  uncheckedIcon={true}
+                  checked={props.checked}
+                />
+              </div>
             </div>
           </div>
           <Nav />
         </div>
+        <MobileHeader
+          className={`menu-container `}
+          onClick={props.switch}
+          checked={props.checked}
+        />
       </header>
-      <MobileHeader className={`menu-container container-fluid ${show ? null : 'hidden'}`} />
     </>
   );
 }

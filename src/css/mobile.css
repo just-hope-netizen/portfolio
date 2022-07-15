@@ -1,3 +1,6 @@
+/* @media (max-width: 320px) {
+
+} */
 @media (max-width: 630px) {
   .project {
     width: 100% !important;
@@ -5,38 +8,44 @@
   div.menu-container {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px 0;
   }
-  div.pc-header,
-  #top-bar {
+  div.pc-header {
     display: none;
   }
   main.main {
     padding-top: 120px;
   }
-  .nav-item {
+  .nav-item, .switch-container.mobile {
     margin: 20px;
+  }
+  #light .menu{
+      background-color: #000;
+      
+    }
+    #dark .menu{
+      background-color: #fff;
+      
   }
   .menu {
     left: 100%;
     transition: left 1s;
-    background: #4831d4;
   }
   .menu.slide {
     left: 50%;
   }
-  .menu-btn{
+  .menu-btn {
     position: absolute;
     top: 0.9rem;
-    right: 0.75rem;
+    right: 1rem;
     z-index: 1;
   }
-  .nav-item-link{
-    color: #ccf381;
+  .nav-item-link {
+    /* color: #ccf381; */
   }
-  .focus{
+  .focus {
     background: none !important;
-    color: #fff !important;
+    /* color: #fff !important; */
   }
   .backdrop {
     position: fixed;
@@ -46,13 +55,13 @@
     left: 0;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
-    transition: right 1s ;
-}
-.backdrop.slide {
-      right: 50%;
+    transition: right 1s;
   }
-  p.intro{
-    line-height: 1rem;
+  .backdrop.slide {
+    right: 50%;
+  }
+  p.intro {
+    line-height: 1.2rem;
   }
 }
 @media (max-width: 854px) {
