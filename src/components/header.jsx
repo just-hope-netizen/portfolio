@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ReactSwitch from 'react-switch';
+import { Logo } from '../assets/svg';
 import MobileHeader from './mobile-header';
 import Nav from './nav';
 
@@ -44,9 +45,9 @@ function Header(props) {
       >
         <div className='row py-3 pc-header '>
           <div className='col-6'>
-            <div className='row'>
-              <Link to='/' className='col-3'>
-                image
+            <div className='row d-flex align-items-center'>
+              <Link to='/' className='col-3 logo-container'>
+                <Logo />
               </Link>
               <div className='col-3'>
                 <ReactSwitch

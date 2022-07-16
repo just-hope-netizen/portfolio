@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CloseMenuIcon, MenuIcon } from '../assets/svg';
+import { CloseMenuIcon, Logo, MenuIcon } from '../assets/svg';
 import Backdrop from './backdrop';
 import Menu from './menu';
 
@@ -11,9 +11,10 @@ function MobileHeader(props) {
   }
   return (
     <div className={props.className}>
-      <Link to='/' className='col-3'>
-        image
+      <Link to='/' className='col-3 logo-container'>
+        <Logo />
       </Link>
+   
       <button
         className='menu-btn'
         onClick={() => {

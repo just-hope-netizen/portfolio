@@ -5,7 +5,7 @@
   padding-top: 200px;
 }
 #top-bar {
-  border: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
   z-index: 1;
 }
 #light #top-bar,
@@ -15,10 +15,10 @@
 }
 #dark #top-bar {
   background-color: #000;
-  border: 1px solid #696969;
+  border-bottom: 1px solid #696969;
 }
 #dark svg {
-  color: #eaeaea;
+  color: #fff;
 }
 #dark .intro,
 #dark .container,
@@ -34,6 +34,10 @@
 }
 #light .work-link{
   color: #696969;
+}
+
+#light .logo-container > svg{
+color: #000;
 }
 
 .nav-item {
