@@ -1,0 +1,98 @@
+.degree {
+    position: absolute;
+  left: 210px;
+  transform-origin: 50% 220px;
+}
+.main-circle {
+  width: 450px;
+  height: 450px;
+  margin: auto;
+  animation: orbit 80s linear infinite;
+}
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.degree.first {
+  transform: rotate(0deg);
+}
+.degree.second {
+  transform: rotate(40deg);
+}
+.degree.third {
+  transform: rotate(80deg);
+}
+.degree.fourth {
+  transform: rotate(120deg);
+}
+.degree.fifth {
+  transform: rotate(160deg);
+}
+.degree.sixth {
+  transform: rotate(200deg);
+}
+.degree.seventh {
+  transform: rotate(240deg);
+}
+.degree.eighth {
+  transform: rotate(280deg);
+}
+.degree.ninth {
+  transform: rotate(320deg);
+}
+.degree.ninth svg,
+.degree.eighth svg {
+  width: 48px;
+  height: 48px;
+}
+.center-label {
+  background: #2a2e35;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: calc((100% / 2) - 40px);
+  top: calc((100% / 2) - 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: reverse-orbit 80s linear infinite;
+}
+@keyframes reverse-orbit {
+    0% {
+        transform: rotate(1turn);
+    }
+    100% {
+      transform: rotate(0deg);
+  }
+}
+
+.stack-name{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 11px;
+}
+
+.pulse{
+  animation: pulse 1.5s ease infinite;
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+
