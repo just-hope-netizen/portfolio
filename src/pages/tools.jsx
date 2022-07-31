@@ -2,22 +2,25 @@ import { useState } from 'react';
 import bootstrapIcon from '../assets/image/bootstrap.png';
 import nodejsIcon from '../assets/image/nodejs.png';
 import {
+  CodeIcon,
   CssIcon,
   ExpressIcon,
   FirebaseIcon,
   GitIcon,
   HtmlIcon,
+  IntergrationIcon,
   JavascriptIcon,
   MongodbIcon,
   ReactIcon,
-  VscodeIcon,
+  SupportIcon,
+  VscodeIcon
 } from '../assets/svg';
 
 function Tools() {
   const [stackName, setStackName] = useState('react');
 
   return (
-    <main className='main px-3'>
+    <main className='main px-3 pb-5'>
       <h5>TECH STACK:</h5>
       <div className='main-circle'>
         <div className='degree-wrapper'>
@@ -99,43 +102,74 @@ function Tools() {
             />
           </div>
         </div>
-        <div className='center-label'>
+        <div
+          className={`center-label ${
+            (stackName === 'react' && 'react-style') ||
+            (stackName === 'javascript' && 'javascript-style') ||
+            (stackName === 'firebase' && 'firebase-style') ||
+            (stackName === 'bootstrap' && 'bootstrap-style') ||
+            (stackName === 'mongo db' && 'mongo-style') ||
+            (stackName === 'expressjs' && 'express-style') ||
+            (stackName === 'html' && 'html-style') ||
+            (stackName === 'css' && 'css-style') ||
+            (stackName === 'nodejs' && 'node-style')
+          }`}
+        >
           <span className='stack-name'>{stackName}</span>
         </div>
       </div>
       <section className='mt-5'>
-        <h6>
+        <h5>
           VERSION CONTROL: <GitIcon />
-        </h6>
-        <h6>
+        </h5>
+        <h5>
           CODE EDITOR: <VscodeIcon />
-        </h6>
+        </h5>
       </section>
       <span className='divider my-5 px-sm-1'></span>
 
       <section>
-        <div>
-          <article className='s-card'>
-            <div className='icon-wrap'>
-              <img src={''} alt='design' />
+        <h5 className='text-center my-5'>SERVICES </h5>
+        <div className='row  my-3'>
+          <article className='col-lg-4 my-2'>
+            <div className='s-card'>
+              <div className='s-icon-wrap'>
+                <CodeIcon />
+              </div>
+              <h5 className='s-heading'>Web Development</h5>
+              <p>
+                I build simple, flexible, mobile responsive &amp; custom website
+                for individuals &amp; small/medium sized company. With
+                usability, accessibility &amp; functionality in mind.
+              </p>
             </div>
-            <h3>Web Design</h3>
-            <p>
-              I'll help you with everything involved with visual
-              aesthetics(color scheme, layout, information flow etc.) &amp;
-              usability of your website.
-            </p>
           </article>
-          <article className='s-card'>
-            <div className='icon-wrap'>
-              <img src={''} alt='design' />
+          <article className='col-lg-4 my-2'>
+            <div className='s-card'>
+              <div className='s-icon-wrap'>
+                <IntergrationIcon />
+              </div>
+              <h5 className='s-heading'>Integration</h5>
+              <p>
+                I'll help you integrate 3rd party APIs into your web app. App
+                integration helps manage &amp; keep your data in sync, automate
+                task, enhance productivity &amp; drive more revenue.
+              </p>
             </div>
-            <h3>Web Design</h3>
-            <p>
-              I'll help you with everything involved with visual
-              aesthetics(color scheme, layout, information flow etc.) &amp;
-              usability of your website.
-            </p>
+          </article>
+          <article className='col-lg-4 my-2'>
+            <div className='s-card'>
+              <div className='s-icon-wrap'>
+                <SupportIcon />
+              </div>
+              <h5 className='s-heading'>Continous Support</h5>
+              <p>
+                Even after your project is completed, i provide continous
+                support wich may includes fixes &amp; update, development of
+                additional functionality &amp; features that will make your
+                product reach its full potentials.
+              </p>
+            </div>
           </article>
         </div>
       </section>
