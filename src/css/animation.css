@@ -4,16 +4,14 @@
   transform-origin: 50% 220px;
   cursor: pointer;
 }
-.services-container{
-  position: relative;
-  top: 450px;
+#light, #dark{
+  overflow-x: hidden;
 }
 .main-circle {
   width: 450px;
   height: 450px;
-  position: absolute;
-  top: 240px;
-  left: calc((50% - 225px));
+  margin: auto;
+
   animation: orbit 80s linear infinite;
 }
 @keyframes orbit {

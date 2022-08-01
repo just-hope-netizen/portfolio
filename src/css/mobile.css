@@ -75,8 +75,6 @@
 .main-circle {
   width: 300px;
   height: 300px;
-  top: 165px;
-  left: calc((50% - 150px));
 }
 .services-container{
   top: 300px;
@@ -93,9 +91,10 @@ div.email-wrapper{
   margin: 20px 0 0 0;
 }
 }
-@media (max-width: 425px) {
+@media (max-width: 320px) {
   h5{
     font-size: 18px;
   }
+ 
 }
 

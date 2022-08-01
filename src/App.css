@@ -31,6 +31,10 @@
   background-color: #cdcdd4;
 }
 #dark .work-section-heading,
+#dark .contact-heading,
+#dark input,
+#dark label,
+#dark textarea,
 #dark .work-link,
 #dark .skill-heading,
 #dark .feature-projects-heading,
@@ -121,6 +125,10 @@
   max-width: 500px;
   margin: auto;
 }
+.contact-heading{
+  font-weight: 600;
+}
+
 .project__logo-wrapper {
   display: flex;
   align-items: center;
@@ -195,6 +203,9 @@
   padding: 1rem;
   height: 100%;
 }
+#dark .s-card{
+  border-color: #fafafa;
+}
 .s-icon-wrap {
   padding: 10px;
   height: 60px;
@@ -224,13 +235,17 @@
   background-color: #000;
   border-radius: 5px;
   color: #cdcdd4;
-  height: 34px;
+  height: 45px;
 }
 .inactive-btn {
   opacity: 0.5;
 }
 .email-wrapper{
   margin-left: 25px;
+}
+/* refactor */
+.thanks-container{
+  height: 100vh;
 }
 .divider {
   display: inline-block;

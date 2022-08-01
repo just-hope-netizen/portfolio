@@ -17,26 +17,34 @@ function Contact(props) {
       email: email,
       message: message,
     };
-    const res = await axios.post('https://formspree.io/f/xzbwpevg', data, {
-      headers: {
+    try {
+      
+      const res = await axios.post('https://formspree.io/f/xzbwpevg', data, {
+        headers: {
         Accept: 'application/json',
       },
     });
     if (res.data.ok === true) {
       navigate('/thanks');
-      console.log(res);
     } else {
       alert(
         'Email server is probably down, you can contact me at hopepeter007@gmail.com.'
       );
       setBtnSpinner(false)
     }
+  } catch (err) {
+     alert(
+       'Email server is probably down, you can contact me at hopepeter007@gmail.com.'
+     );
+      setBtnSpinner(false);
+    
+  }
   }
 
   return (
     <div className={`${props.className ? 'mt-4' : 'main'} container pb-5`}>
       <header className=' text-center'>
-        <h4>Send me a message!</h4>
+        <h4 className=' contact-heading'>Send me a message!</h4>
         <p>
           Got a question or proposal, or just want <br /> to say hello? Go
           ahead.
@@ -95,6 +103,16 @@ function Contact(props) {
           <span className={btnSpinner ? 'loader' : null}></span>
         </button>
       </form>
+      <div
+        id='Announcer'
+        role='status'
+        aria-live='assertive'
+        aria-atomic='true'
+        aria-hidden='true'
+        className='visuallyhidden'
+      >
+        You just navigated to: Contact
+      </div>
     </div>
   );
 }

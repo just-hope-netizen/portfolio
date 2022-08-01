@@ -82,12 +82,12 @@ function Projects() {
             </div>
           </li>
 
-          <li className='project '>
+          <li className='project m-1 mb-sm-2'>
             <a
               aria-label='Personal Website live demo.'
               target='_blank'
               rel='noopener noreferrer'
-              href='https://olaolu.dev'
+              href='https://hope-peter.netlify.app'
             >
               <figure className='project__logo'>
                 <span aria-hidden='true' className='project__logo-wrapper'>
@@ -102,7 +102,7 @@ function Projects() {
               <a
                 target='_blank'
                 rel='noopener noreferrer'
-                href='https://hope-peter.dev'
+                href='//hope-peter.netlify.app'
                 aria-label='Personal Website live demo.'
               >
                 Personal Website

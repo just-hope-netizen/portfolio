@@ -14,7 +14,7 @@ function Home() {
           mobile responsive & custom website for my employer.
         </p>
         <p className='intro'>
-          I mostly work with Javascript, Node, and new technologies as specified
+          I mostly work with Javascript, and new technologies as specified
           by employers and clients. I enjoy supporting Small/Medium Business
           with technology.
         </p>
@@ -68,47 +68,57 @@ function Home() {
                   Don-Remolo logo.
                 </figcaption>
               </figure>
-              <span>
+              <span className='text-justify'>
                 Don-Remolo is a CRUD web app built using react and express for
                 the frontend and backend respectively with paypal intergration
                 for payment and mongoDB for database. Don-Remolo is a e-commerce
-                web app with amazing features like auth, user create, edit and
-                delete their profile and much more.
+                web app with amazing features like auth, admin access which
+                allows the admin to create product, edit product, delete
+                product, see product ordered, cancel product and much more.
+                <span className='fw-bold'>Contact me for admin access</span>
               </span>
             </a>
-            <Link to={'/contact'}> contact me for admin access</Link>
           </li>
           <li>
             <a
               target='_blank'
               rel='noopener noreferrer'
-              href='https://don-remolo.netlify.app'
-              aria-label='don-remolo live demo.'
+              href='https://ceevo.netlify.app'
+              aria-label='ceevo live demo.'
               className='feature-project d-flex flex-column flex-lg-row align-items-center  p-4 mb-2'
             >
               <figure className=' d-flex align-items-center me-4'>
                 <span aria-hidden='true'>
                   <img
                     src={ceevoLogo}
-                    alt='don-remolo logo'
+                    alt='ceevo logo'
                     className='project__logo-img'
                   />
                 </span>
-                <figcaption className='visuallyhidden'>
-                  Don-Remolo logo.
-                </figcaption>
+                <figcaption className='visuallyhidden'>Ceevo logo.</figcaption>
               </figure>
-              <span>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
-                voluptatem maiores! Similique illo commodi tempora natus, rerum,
-                accusamus expedita possimus consectetur aliquid atque optio
-                maiores molestias velit necessitatibus totam perferendis.
+              <span className='text-justify'>
+                Ceevo is a registration and login system built with react,
+                express and mongodb for client side, server side and database
+                respectively. Features include email verification for creating
+                an account, email redirect link to change password etc, test it
+                out to see a suprising feature i implemented at the end.
               </span>
             </a>
           </li>
         </ul>
       </div>
-      <Contact className={true}/>
+      <Contact className={true} />
+      <div
+        id='Announcer'
+        role='status'
+        aria-live='assertive'
+        aria-atomic='true'
+        aria-hidden='true'
+        className='visuallyhidden'
+      >
+        You just navigated to: Home
+      </div>
     </main>
   );
 }

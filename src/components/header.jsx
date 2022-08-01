@@ -49,7 +49,7 @@ function Header(props) {
               <Link to='/' className='col-3 logo-container'>
                 <Logo />
               </Link>
-              <div className='col-3 d-flex align-items-center'>
+              <div className='col-3 d-flex align-items-center '>
                 <div>
                   <SunIcon />
                 </div>

@@ -2,7 +2,7 @@ import { CheckIcon } from '../assets/svg';
 
 function Thanks() {
   return (
-    <div className='main container pb-5'>
+    <div className='main container pb-5 thanks-container'>
       <div className='d-flex flex-column justify-content-center align-items-center'>
         <h1>THANK YOU!</h1>
         <CheckIcon />

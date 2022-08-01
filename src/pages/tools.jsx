@@ -20,9 +20,9 @@ function Tools() {
   const [stackName, setStackName] = useState('react');
 
   return (
-    <main className='main px-3 pb-5 position-relative'>
-      <h5 >TECH STACK:</h5>
-      <div className='main-circle'>
+    <main className='main px-3 pb-5 row'>
+      <h5>TECH STACK:</h5>
+      <div className='main-circle  col-12'>
         <div className='degree-wrapper'>
           <div className='degree first'>
             <ReactIcon
@@ -118,62 +118,70 @@ function Tools() {
           <span className='stack-name'>{stackName}</span>
         </div>
       </div>
-      <div className='services-container'>
-        <section className='mt-5'>
-          <h5 className='mb-3 '>
-            VERSION CONTROL: <GitIcon />
-          </h5>
-          <h5>
-            CODE EDITOR: <VscodeIcon />
-          </h5>
-        </section>
-        <span className='divider my-5 px-sm-1'></span>
+      <section className='mt-5'>
+        <h5 className='mb-3 '>
+          VERSION CONTROL: <GitIcon />
+        </h5>
+        <h5>
+          CODE EDITOR: <VscodeIcon />
+        </h5>
+      </section>
+      <span className='divider my-5 px-sm-1'></span>
 
-        <section>
-          <h5 className='text-center my-5'>SERVICES </h5>
-          <div className='row  my-3'>
-            <article className='col-lg-4 my-2'>
-              <div className='s-card'>
-                <div className='s-icon-wrap'>
-                  <CodeIcon />
-                </div>
-                <h5 className='s-heading'>Web Development</h5>
-                <p>
-                  I build simple, flexible, mobile responsive &amp; custom
-                  website for individuals &amp; small/medium sized company. With
-                  usability, accessibility &amp; functionality in mind.
-                </p>
+      <section>
+        <h5 className='text-center my-5'>SERVICES </h5>
+        <div className='row  my-3'>
+          <article className='col-lg-4 my-2'>
+            <div className='s-card'>
+              <div className='s-icon-wrap'>
+                <CodeIcon />
               </div>
-            </article>
-            <article className='col-lg-4 my-2'>
-              <div className='s-card'>
-                <div className='s-icon-wrap'>
-                  <IntergrationIcon />
-                </div>
-                <h5 className='s-heading'>Integration</h5>
-                <p>
-                  I'll help you integrate 3rd party APIs into your web app. App
-                  integration helps manage &amp; keep your data in sync,
-                  automate task, enhance productivity &amp; drive more revenue.
-                </p>
+              <h5 className='s-heading'>Web Development</h5>
+              <p>
+                I build simple, flexible, mobile responsive &amp; custom website
+                for individuals &amp; small/medium sized company. With
+                usability, accessibility &amp; functionality in mind.
+              </p>
+            </div>
+          </article>
+          <article className='col-lg-4 my-2'>
+            <div className='s-card'>
+              <div className='s-icon-wrap'>
+                <IntergrationIcon />
               </div>
-            </article>
-            <article className='col-lg-4 my-2'>
-              <div className='s-card'>
-                <div className='s-icon-wrap'>
-                  <SupportIcon />
-                </div>
-                <h5 className='s-heading'>Continous Support</h5>
-                <p>
-                  Even after your project is completed, i provide continous
-                  support wich may includes fixes &amp; update, development of
-                  additional functionality &amp; features that will make your
-                  product reach its full potentials.
-                </p>
+              <h5 className='s-heading'>Integration</h5>
+              <p>
+                I'll help you integrate 3rd party APIs into your web app. App
+                integration helps manage &amp; keep your data in sync, automate
+                task, enhance productivity &amp; drive more revenue.
+              </p>
+            </div>
+          </article>
+          <article className='col-lg-4 my-2'>
+            <div className='s-card'>
+              <div className='s-icon-wrap'>
+                <SupportIcon />
               </div>
-            </article>
-          </div>
-        </section>
+              <h5 className='s-heading'>Continous Support</h5>
+              <p>
+                Even after your project is completed, i provide continous
+                support wich may includes fixes &amp; update, development of
+                additional functionality &amp; features that will make your
+                product reach its full potentials.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <div
+        id='Announcer'
+        role='status'
+        aria-live='assertive'
+        aria-atomic='true'
+        aria-hidden='true'
+        className='visuallyhidden'
+      >
+        You just navigated to: Tools
       </div>
     </main>
   );
