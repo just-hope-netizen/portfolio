@@ -1,10 +1,9 @@
-/* @media (max-width: 320px) {
-
-} */
-@media (max-width: 630px) {
-  .project {
-    width: 100% !important;
+@media (max-width: 854px) {
+  li.project {
+    width: 47%;
   }
+}
+@media (max-width: 630px) {
   div.menu-container {
     display: flex;
     justify-content: space-between;
@@ -27,6 +26,7 @@
     background-color: #000;
   }
   .menu {
+    top:51px;
     left: 100%;
     transition: left 1s;
   }
@@ -39,15 +39,15 @@
     right: 1rem;
     z-index: 1;
   }
-
+  
   .focus {
     background: none !important;
     border-bottom: 2px solid #222;
   }
-
+  
   .backdrop {
     position: fixed;
-    top: 0;
+    top:51px;
     bottom: 0;
     right: 100%;
     left: 0;
@@ -55,15 +55,47 @@
     z-index: 1;
     transition: right 1s;
   }
+
   .backdrop.slide {
     right: 50%;
   }
   p.intro {
     line-height: 1.2rem;
   }
-}
-@media (max-width: 854px) {
-  li.project {
-    width: 47%;
+  .project {
+    width: 100% !important;
+  }
+  li.project:hover {
+    box-shadow: none;
+    transform: none;
   }
 }
+
+@media (max-width: 425px) {
+.main-circle {
+  width: 300px;
+  height: 300px;
+  top: 165px;
+  left: calc((50% - 150px));
+}
+.services-container{
+  top: 300px;
+}
+.degree {
+  left: 130px;
+  transform-origin: 50% 150px;
+}
+.form-name-email{
+  flex-direction: column;
+}
+
+div.email-wrapper{
+  margin: 20px 0 0 0;
+}
+}
+@media (max-width: 425px) {
+  h5{
+    font-size: 18px;
+  }
+}
+

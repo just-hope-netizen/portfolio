@@ -17,7 +17,7 @@ body {
   'Lucida Console';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 ul {
@@ -25,13 +25,30 @@ ul {
   margin-block-start: unset;
 }
 a {
-  color: var(--bs-gray);
+  color: #6c757d;
   text-decoration: none;
 }
 li {
   list-style-type: none;
 }
-button{
+button, input, textarea{
   background: none;
   border: none;
+  outline: none;
 }
+input{
+  width: 100%;
+}
+textarea {
+  width: 100%;
+  resize: none;
+  border-bottom: 1px solid;
+
+}
+label{
+  font-size: 13px;
+}
+/* safari  100vh workaround */
+/* html, body, #root, #dark{
+  height: 100%;
+} */

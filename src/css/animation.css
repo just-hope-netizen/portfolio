@@ -1,12 +1,19 @@
 .degree {
-    position: absolute;
+  position: absolute;
   left: 210px;
   transform-origin: 50% 220px;
+  cursor: pointer;
+}
+.services-container{
+  position: relative;
+  top: 450px;
 }
 .main-circle {
   width: 450px;
   height: 450px;
-  margin: auto;
+  position: absolute;
+  top: 240px;
+  left: calc((50% - 225px));
   animation: orbit 80s linear infinite;
 }
 @keyframes orbit {
@@ -57,30 +64,56 @@
   position: absolute;
   left: calc((100% / 2) - 40px);
   top: calc((100% / 2) - 40px);
+  border: 2px solid;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: reverse-orbit 80s linear infinite;
 }
 @keyframes reverse-orbit {
-    0% {
-        transform: rotate(1turn);
-    }
-    100% {
-      transform: rotate(0deg);
+  0% {
+    transform: rotate(1turn);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 
-.stack-name{
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 11px;
+.stack-name {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 11px;
 }
-
-.pulse{
+.react-style {
+  border-color: #80deea;
+}
+.javascript-style {
+  border-color: #ffd600;
+}
+.html-style {
+  border-color: #e65100;
+}
+.css-style {
+  border-color: #0277bd;
+}
+.mongo-style {
+  border-color: #246e8b;
+}
+.bootstrap-style {
+  border-color: #7509f6;
+}
+.node-style {
+  border-color: #75ac64;
+}
+.express-style {
+  border-color: #b7c0b4;
+}
+.firebase-style {
+  border-color: #ffa000;
+}
+.pulse {
   animation: pulse 1.5s ease infinite;
 }
-
 
 @keyframes pulse {
   0% {
@@ -94,5 +127,19 @@
     opacity: 0;
   }
 }
+.loader {
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+  border: 3px solid #f3f3f3; 
+  border-top: 3px solid #3498db; 
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+}
 
-
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

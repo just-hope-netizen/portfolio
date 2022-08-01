@@ -7,6 +7,8 @@ import Projects from './pages/projects';
 import Tools from './pages/tools';
 import { ThemeContext } from './context/theme';
 import { useState } from 'react';
+import Contact from './pages/contact';
+import Thanks from './pages/thanks';
 
 function App() {
   const [theme, setTheme] = useState('light')
@@ -24,6 +26,8 @@ function App() {
             <Route path='/Projects' element={<Projects />} />
             <Route path='/tools' element={<Tools />} />
             <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/thanks' element={<Thanks />} />
           </Routes>
         </div>
       </ThemeContext.Provider>

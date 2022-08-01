@@ -1,4 +1,6 @@
-import donLogo from '../assets/image/don-remolo.png'
+import ceevoLogo from '../assets/image/ceevo.png';
+import donLogo from '../assets/image/don-remolo.png';
+import { Logo } from '../assets/svg';
 
 function Projects() {
   return (
@@ -25,7 +27,6 @@ function Projects() {
               rel='noopener noreferrer'
               href='https://don-remolo.netlify.app'
               aria-label='don-remolo live demo.'
-              className='project__link'
             >
               <figure className='project__logo'>
                 <span aria-hidden='true' className='project__logo-wrapper'>
@@ -41,82 +42,73 @@ function Projects() {
               </figure>
             </a>
             <div className='project__info'>
-              <h5>Don-Remolo</h5>
               <a
                 target='_blank'
                 rel='noopener noreferrer'
                 href='https://don-remolo.netlify.app'
                 aria-label='don-remolo live demo.'
-                className='project__info__siteName'
               >
-                don-remolo.app
+                Don-Remolo
               </a>
             </div>
           </li>
-          <li className='project m-1 '>
-            <a href='/work/conectar' className='project__link'>
-              Conectar project summary.
+          <li className='project m-1 mb-sm-2 '>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://ceevo.netlify.app'
+              aria-label='ceevo live demo.'
+            >
+              <figure className='project__logo'>
+                <span aria-hidden='true' className='project__logo-wrapper'>
+                  <img
+                    src={ceevoLogo}
+                    alt='ceevo logo'
+                    className='project__logo-img'
+                  />
+                </span>
+                <figcaption className='visuallyhidden'>Ceevo logo.</figcaption>
+              </figure>
             </a>
-            <figure className='project__logo'>
-              <span aria-hidden='true'></span>
-              <figcaption className='visuallyhidden'>Conectar logo.</figcaption>
-            </figure>
             <div className='project__info'>
-              <h5>Conectar</h5>
-            </div>
-          </li>
-          <li className='project  m-1 '>
-            <a href='/work/john-deere' className='project__link'>
-              John Deere project summary.
-            </a>
-            <figure className='project__logo'>
-              <span aria-hidden='true'></span>
-              <figcaption className='visuallyhidden'>
-                John Deere logo.
-              </figcaption>
-            </figure>
-            <div className='project__info'>
-              <h5>John Deere</h5>
               <a
                 target='_blank'
                 rel='noopener noreferrer'
-                href='https://atu300.deere.com'
-                aria-label='John Deere live demo.'
-                className='project__info__siteName'
+                href='https://ceevo.netlify.app'
+                aria-label='ceevo live demo.'
               >
-                atu300.deere.com
+                Ceevo
               </a>
             </div>
           </li>
-          {/* <li className='project '>
+
+          <li className='project '>
             <a
               aria-label='Personal Website live demo.'
               target='_blank'
               rel='noopener noreferrer'
               href='https://olaolu.dev'
-              className='project__link'
             >
-              Personal Website project summary.
+              <figure className='project__logo'>
+                <span aria-hidden='true' className='project__logo-wrapper'>
+                  <Logo />
+                </span>
+                <figcaption className='visuallyhidden'>
+                  Personal Website logo.
+                </figcaption>
+              </figure>
             </a>
-            <figure className='project__logo'>
-              <span aria-hidden='true'></span>
-              <figcaption className='visuallyhidden'>
-                Personal Website logo.
-              </figcaption>
-            </figure>
             <div className='project__info'>
-              <h5>Personal Website</h5>
               <a
                 target='_blank'
                 rel='noopener noreferrer'
-                href='https://olaolu.dev'
+                href='https://hope-peter.dev'
                 aria-label='Personal Website live demo.'
-                className='project__info__siteName'
               >
-                olaolu.dev
+                Personal Website
               </a>
             </div>
-          </li> */}
+          </li>
         </ul>
       </section>
       <div

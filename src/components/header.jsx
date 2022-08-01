@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ReactSwitch from 'react-switch';
-import { Logo } from '../assets/svg';
+import { Logo, MoonIcon, SunIcon } from '../assets/svg';
 import MobileHeader from './mobile-header';
 import Nav from './nav';
 
@@ -49,14 +49,24 @@ function Header(props) {
               <Link to='/' className='col-3 logo-container'>
                 <Logo />
               </Link>
-              <div className='col-3'>
+              <div className='col-3 d-flex align-items-center'>
+                <div>
+                  <SunIcon />
+                </div>
                 <ReactSwitch
                   onChange={props.switch}
                   onColor={'#ddd'}
                   onHandleColor={'#000'}
                   uncheckedIcon={true}
+                  checkedIcon={true}
+                  height={15}
                   checked={props.checked}
+                  className='mx-2'
                 />
+                <div>
+
+                <MoonIcon />
+                </div>
               </div>
             </div>
           </div>
