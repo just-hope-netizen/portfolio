@@ -49,8 +49,11 @@ function Header(props) {
           </Link>
 
           <div className='col-9 d-flex align-items-center justify-content-end'>
-            <div className='row d-flex justify-content-between '>
-              <div className='col-2 d-flex align-items-center '>
+            <div className='row d-flex align-items-center justify-content-end '>
+              <div className='col-7'>
+                <Nav />
+              </div>
+              <div className='col-2 d-flex align-items-center me-4'>
                 <div>
                   <SunIcon />
                 </div>
@@ -67,9 +70,6 @@ function Header(props) {
                 <div>
                   <MoonIcon />
                 </div>
-              </div>
-              <div className='col-8'>
-                <Nav />
               </div>
             </div>
           </div>
