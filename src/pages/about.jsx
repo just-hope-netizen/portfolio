@@ -36,17 +36,7 @@ function About() {
         <p>2022 -</p>
       </div>
       <div>
-        <h6>
-          <a
-            target='_blank'
-            rel='noopener noreferrer'
-            href='https://bizzdeskgroup.com'
-            aria-label='bizz desk site.'
-            className='work-link'
-          >
-            Bizz Desk
-          </a>
-        </h6>
+        <h6 className='work-link'>Bizz Desk</h6>
         <span>Intern</span>
         <p>2021 - 2022</p>
       </div>
