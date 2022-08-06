@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code');
-@font-face {
-  font-family: 'MonoLisa';
-  src: url('./assets/font/MonoLisa-Regular.woff2') format('woff'),
-  url('./assets/font/MonoLisa-Regular.woff2') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,8 +7,7 @@
 }
 
 body {
-  font-family: 'MonoLisa', 'Fira Code', monospace, 'DejaVu Sans Mono',
-  'Lucida Console';
+  font-family: sans-serif, 'Fira Code', monospace,;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
@@ -36,11 +29,12 @@ button, input, textarea{
   border: none;
   outline: none;
 }
-input{
+input, textarea{
   width: 100%;
+  background-color: lightgray;
+  border-radius: 5px;
 }
 textarea {
-  width: 100%;
   resize: none;
   border-bottom: 1px solid;
 

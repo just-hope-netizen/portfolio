@@ -43,13 +43,14 @@ function Header(props) {
         }`}
         id='top-bar'
       >
-        <div className='row py-3 pc-header '>
-          <div className='col-6'>
-            <div className='row d-flex align-items-center'>
-              <Link to='/' className='col-3 logo-container'>
-                <Logo />
-              </Link>
-              <div className='col-3 d-flex align-items-center '>
+        <div className='row py-3 pc-header  '>
+          <Link to='/' className='col-3 logo-container'>
+            <Logo />
+          </Link>
+
+          <div className='col-9 d-flex align-items-center justify-content-end'>
+            <div className='row d-flex justify-content-between '>
+              <div className='col-2 d-flex align-items-center '>
                 <div>
                   <SunIcon />
                 </div>
@@ -64,13 +65,14 @@ function Header(props) {
                   className='mx-2'
                 />
                 <div>
-
-                <MoonIcon />
+                  <MoonIcon />
                 </div>
+              </div>
+              <div className='col-8'>
+                <Nav />
               </div>
             </div>
           </div>
-          <Nav />
         </div>
         <MobileHeader
           className={`menu-container `}

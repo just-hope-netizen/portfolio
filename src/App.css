@@ -32,9 +32,7 @@
 }
 #dark .work-section-heading,
 #dark .contact-heading,
-#dark input,
 #dark label,
-#dark textarea,
 #dark .work-link,
 #dark .skill-heading,
 #dark .feature-projects-heading,
@@ -82,9 +80,7 @@
 .menu-container {
   display: none;
 }
-.pc-header {
-  display: flex;
-}
+
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);

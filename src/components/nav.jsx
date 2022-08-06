@@ -8,7 +8,7 @@ function Nav(props) {
       className={
         props.className
           ? props.className
-          : 'd-flex col-6 align-items-center justify-content-end '
+          : 'd-flex align-items-center justify-content-end '
       }
     >
       <ul className={` d-flex  ${props.className && 'flex-column '}`}>
