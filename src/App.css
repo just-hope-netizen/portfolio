@@ -8,7 +8,9 @@
 #top-bar {
   border-bottom: 1px solid #eaeaea;
   z-index: 1;
+  max-width: 1440px;
 }
+
 #light #top-bar,
 #light svg {
   color: #6c757d;

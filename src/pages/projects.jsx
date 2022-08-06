@@ -4,7 +4,7 @@ import { Logo } from '../assets/svg';
 
 function Projects() {
   return (
-    <main className='projects-container main container-fluid'>
+    <main className='projects-container main container-fluid mb-5 pb-5'>
       <header className='page-header row text-center'>
         <h1 aria-label='work.' className='projects-heading'>
           <span aria-hidden='true'>
@@ -87,7 +87,7 @@ function Projects() {
               aria-label='Personal Website live demo.'
               target='_blank'
               rel='noopener noreferrer'
-              href='https://hope-peter.netlify.app'
+              href='https://hope-peter.tech'
             >
               <figure className='project__logo'>
                 <span aria-hidden='true' className='project__logo-wrapper'>
