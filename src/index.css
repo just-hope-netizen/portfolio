@@ -33,6 +33,7 @@ input, textarea{
   width: 100%;
   background-color: lightgray;
   border-radius: 5px;
+  padding-left: 10px;
 }
 textarea {
   resize: none;
