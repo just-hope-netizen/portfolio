@@ -1,9 +1,10 @@
 import { useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { DownloadIcon } from '../assets/svg';
+import { Link, useLocation } from 'react-router-dom';
+import { ArrowIcon, DownloadIcon } from '../assets/svg';
 
 function Footer() {
   const footer = useRef()
+ const location = useLocation()
 
   return (
     <footer className='mt-5 py-5 container ' ref={footer}>
@@ -13,9 +14,7 @@ function Footer() {
           <p>hopepeter007@gmail.com</p>
         </div>
         <ul className='ms-o ps-0 my-4 my-md-0 ms-md-5 ps-md-5'>
-          <h6 className='footer-heading'>
-            Navigate
-          </h6>
+          <h6 className='footer-heading'>Navigate</h6>
           <li className='mb-2'>
             <Link
               to='/'
@@ -24,6 +23,11 @@ function Footer() {
               }}
             >
               home
+              <ArrowIcon
+                className={`arrow-icon ${
+                  location.pathname === '/' && 'hidden'
+                }`}
+              />
             </Link>
           </li>
           <li className='mb-2'>
@@ -34,26 +38,11 @@ function Footer() {
               }}
             >
               projects
-            </Link>
-          </li>
-          <li className='mb-2'>
-            <Link
-              to='/about'
-              onClick={() => {
-                footer.scrollTo(0);
-              }}
-            >
-              about
-            </Link>
-          </li>
-          <li>
-            <Link
-              to='/tools'
-              onClick={() => {
-                footer.scrollTo(0);
-              }}
-            >
-              tools
+              <ArrowIcon
+                className={`arrow-icon ${
+                  location.pathname === '/projects' && 'hidden'
+                }`}
+              />
             </Link>
           </li>
         </ul>

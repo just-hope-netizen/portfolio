@@ -1,20 +1,6 @@
-function About() {
+function SkillsExperience() {
   return (
-    <main className='main container pb-3'>
-      <p>
-        I'm Hope a Nigeria based software developer. I specialise in interface
-        design and functionality in web-based applications with a focus on
-        simplicity & usability.
-      </p>
-      <p>
-        I'm passionate about design and functionality and how the two can be use
-        to create good user experience.{' '}
-      </p>
-      <p>
-        Outside of work my hobbies include playing video games, watching sci-fi
-        shows & movies and experimenting with the latest tech.
-      </p>
-      <span className='divider my-5'></span>
+    <div className='container pt-5'>
       <section className='mt-5'>
         <h5 className='skill-heading'>SOFT SKILLS:</h5>
         <ul>
@@ -40,8 +26,8 @@ function About() {
         <span>Intern</span>
         <p>2021 - 2022</p>
       </div>
-    </main>
+    </div>
   );
 }
 
-export default About;
+export default SkillsExperience;

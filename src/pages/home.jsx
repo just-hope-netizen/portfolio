@@ -2,34 +2,43 @@ import { Link } from 'react-router-dom';
 import donLogo from '../assets/image/don-remolo.png';
 import ceevoLogo from '../assets/image/ceevo.png';
 import Contact from './contact';
+import { GitLinkIcon } from '../assets/svg';
+import TechStack from '../components/tech-stack';
+
 function Home() {
   return (
     <main className='main container px-md-5'>
       <div className='row mx-md-5 pb-5'>
         <small>Hi, my name is</small>
-        <h1>Hope Peter</h1>
+        <h1>Hope Peter,</h1>
         <p className='intro'>
-          I am a Fullstack Software developer, as a Software Engineer I build
-          products with high functionality, user friendly, accessible, flexible,
-          mobile responsive & custom website for my employer.
+          I am a Software Engineer who I build high-functional, user friendly,
+          accessible, flexible, mobile responsive & custom website for my
+          employer. I specialise in interface development and functionality in
+          web-based applications with a focus on simplicity & usability.
         </p>
         <p className='intro'>
-          I mostly work with Javascript, and new technologies as specified
-          by employers and clients. I enjoy supporting Small/Medium Business
-          with technology.
+          I'm passionate about design and functionality and how the two can be
+          use to create good user experience. I mostly work with Javascript, and
+          any new technologies as specified by my employers and clients. I enjoy
+          supporting Small/Medium Business with technology.
+        </p>
+        <p className='intro'>
+          Outside of work my hobbies include playing video games, watching
+          sci-fi shows & movies and experimenting with the latest tech.
         </p>
 
         <div className='home-links-list my-3'>
           <ul className='home-links d-flex justify-content-between align-items-center ps-0'>
             <li>
               <a
-                className=' github-link d-flex justify-content-center align-items-center'
+                className='github-link d-flex justify-content-center align-items-center'
                 href='https://github.com/just-hope-netizen'
                 title='Github'
                 target='_blank'
                 rel='noreferrer'
               >
-                <span className='icon icon-github'></span>
+                <GitLinkIcon className='git-link-icon' />
               </a>
             </li>
             <li>
@@ -41,6 +50,9 @@ function Home() {
         </div>
 
         <span className='divider my-5 px-sm-1'></span>
+        <TechStack />
+        <span className='divider my-5 px-sm-1'></span>
+
         <div className=' mt-4  '>
           <h4 className='h3  feature-projects-heading'>Featured projects</h4>
           <p className=''>
@@ -74,7 +86,7 @@ function Home() {
                 for payment and mongoDB for database. Don-Remolo is a e-commerce
                 web app with amazing features like auth, admin access which
                 allows the admin to create product, edit product, delete
-                product, see product ordered, cancel product and much more.
+                product, see product ordered, cancel product and much more.{' '}
                 <span className='fw-bold'>Contact me for admin access</span>
               </span>
             </a>
@@ -108,6 +120,7 @@ function Home() {
           </li>
         </ul>
       </div>
+     
       <Contact className={true} />
       <div
         id='Announcer'

@@ -141,4 +141,19 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+.arrow-icon{
+    animation-name: forward;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
 
+  @keyframes forward {
+    0%{
+      margin-left: 1rem;
+    }
+    100%{
+      margin-left: 2rem;
+    }
+
+  }

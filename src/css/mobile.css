@@ -12,6 +12,9 @@
   div.pc-header {
     display: none;
   }
+ header#top-bar{
+    display: block;
+  }
   main.main {
     padding-top: 120px;
   }
@@ -23,7 +26,8 @@
     background-color: #fff;
   }
   #dark .menu {
-    background-color: #000;
+  background-color: rgb(19, 17, 17);
+
   }
   .menu {
     top:51px;
