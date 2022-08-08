@@ -56,7 +56,7 @@ function Home() {
         <div className=' mt-4  '>
           <h4 className='h3  feature-projects-heading'>Featured projects</h4>
           <p className=''>
-            A collection of some side projects that i have shipped recently.
+            A collection of some side projects that I have shipped recently.
           </p>
         </div>
         <ul className=' mb-5'>
@@ -114,7 +114,7 @@ function Home() {
                 express and mongodb for client side, server side and database
                 respectively. Features include email verification for creating
                 an account, email redirect link to change password etc, test it
-                out to see a suprising feature i implemented at the end.
+                out to see a suprising feature I implemented at the end.
               </span>
             </a>
           </li>
