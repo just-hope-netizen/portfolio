@@ -1,20 +1,5 @@
-#dark {
-  background: black url('../assets/svg/bg-stars.svg') repeat 5% 5%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  animation: star-move 20s linear infinite;
-}
-@keyframes star-move {
-  from {
-    background-position: 5% 5%;
-  }
-  to {
-    background-position: 1300% 600%;
-  }
-}
+
+
 .degree {
   position: absolute;
   left: 210px;

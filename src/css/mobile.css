@@ -95,6 +95,9 @@
 div.email-wrapper{
   margin: 20px 0 0 0;
 }
+div.project__info{
+  padding: 0;
+}
 }
 @media (max-width: 320px) {
   h5{

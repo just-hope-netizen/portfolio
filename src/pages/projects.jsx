@@ -24,7 +24,7 @@ function Projects() {
             aria-label='projects'
             className='projects d-flex  flex-wrap justify-content-between align-items-center p-3 my-3'
           >
-            <li className='project m-1 mb-sm-2 '>
+            <li className='project m-1 mb-3 mb-md-0'>
               <a
                 target='_blank'
                 rel='noopener noreferrer'
@@ -51,7 +51,7 @@ function Projects() {
                 <span className='tool-used'>Jsonwebtoken</span>
               </div>
             </li>
-            <li className='project m-1 mb-sm-2 '>
+            <li className='project m-1 mb-3 mb-md-0'>
               <a
                 target='_blank'
                 rel='noopener noreferrer'
@@ -69,8 +69,6 @@ function Projects() {
                 </figure>
               </a>
               <div className='project__info'>
-             
-
                 <span className='tool-used'>Css</span>
                 <span className='tool-used'>React</span>
                 <span className='tool-used'>Redux</span>
@@ -80,7 +78,7 @@ function Projects() {
               </div>
             </li>
 
-            <li className='project m-1 mb-sm-2'>
+            <li className='project  mb-3 mb-md-0'>
               <a
                 aria-label='Personal Website live demo.'
                 target='_blank'
@@ -101,7 +99,6 @@ function Projects() {
                 <span className='tool-used'>Css</span>
                 <span className='tool-used'>React</span>
                 <span className='tool-used'>Bootstrap</span>
-                
               </div>
             </li>
           </ul>

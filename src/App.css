@@ -2,6 +2,9 @@
 .main {
   padding-top: 200px;
 }
+#dark {
+  background: black url('./assets/svg/bg-stars.svg') ;
+}
 #top-bar {
   border-bottom: 1px solid #eaeaea;
   z-index: 1;
@@ -152,7 +155,7 @@ background-color: #463e3e;
   width: 100%;
 }
 .project__info {
-  padding: 1rem;
+  padding: 10px ;
   display: flex;
   flex-wrap: wrap;
 }
