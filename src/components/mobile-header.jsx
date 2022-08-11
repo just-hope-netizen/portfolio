@@ -6,15 +6,19 @@ import Menu from './menu';
 
 function MobileHeader(props) {
   const [menu, setMenu] = useState(false);
+
   function closeMenu() {
     setMenu(false);
+                window.scrollTo(0, 0);
+
+    
   }
   return (
-    <div className={props.className}>
+    <div className={props.className} >
       <Link to='/' className='col-3 logo-container'>
         <Logo />
       </Link>
-   
+
       <button
         className='menu-btn'
         onClick={() => {

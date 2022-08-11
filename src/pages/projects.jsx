@@ -1,6 +1,6 @@
-import ceevoLogo from '../assets/image/ceevo.png';
-import donLogo from '../assets/image/don-remolo.png';
-import { Logo } from '../assets/svg';
+import ceevoLogo from '../assets/image/ceevo-screenshot.png';
+import donLogo from '../assets/image/don-remolo-screenshot.png';
+import logo from '../assets/image/personal-website-shot.png';
 import Services from '../components/services';
 import SkillsExperience from '../components/skills-experience';
 
@@ -39,20 +39,16 @@ function Projects() {
                       className='project__logo-img'
                     />
                   </span>
-                  <figcaption className='visuallyhidden'>
-                    Don-Remolo logo.
-                  </figcaption>
                 </figure>
               </a>
               <div className='project__info'>
-                <a
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  href='https://don-remolo.netlify.app'
-                  aria-label='don-remolo live demo.'
-                >
-                  Don-Remolo
-                </a>
+                <span className='tool-used'>Css</span>
+                <span className='tool-used'>React</span>
+                <span className='tool-used'>Redux</span>
+                <span className='tool-used'>Express.js</span>
+                <span className='tool-used'>Nodemailer</span>
+                <span className='tool-used'>MongoDb</span>
+                <span className='tool-used'>Jsonwebtoken</span>
               </div>
             </li>
             <li className='project m-1 mb-sm-2 '>
@@ -70,20 +66,17 @@ function Projects() {
                       className='project__logo-img'
                     />
                   </span>
-                  <figcaption className='visuallyhidden'>
-                    Ceevo logo.
-                  </figcaption>
                 </figure>
               </a>
               <div className='project__info'>
-                <a
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  href='https://ceevo.netlify.app'
-                  aria-label='ceevo live demo.'
-                >
-                  Ceevo
-                </a>
+             
+
+                <span className='tool-used'>Css</span>
+                <span className='tool-used'>React</span>
+                <span className='tool-used'>Redux</span>
+                <span className='tool-used'>Express.js</span>
+                <span className='tool-used'>Nodemailer</span>
+                <span className='tool-used'>MongoDb</span>
               </div>
             </li>
 
@@ -96,22 +89,19 @@ function Projects() {
               >
                 <figure className='project__logo'>
                   <span aria-hidden='true' className='project__logo-wrapper'>
-                    <Logo />
+                    <img
+                      src={logo}
+                      alt='personal website logo'
+                      className='project__logo-img'
+                    />
                   </span>
-                  <figcaption className='visuallyhidden'>
-                    Personal Website logo.
-                  </figcaption>
                 </figure>
               </a>
               <div className='project__info'>
-                <a
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  href='//hope-peter.netlify.app'
-                  aria-label='Personal Website live demo.'
-                >
-                  Personal Website
-                </a>
+                <span className='tool-used'>Css</span>
+                <span className='tool-used'>React</span>
+                <span className='tool-used'>Bootstrap</span>
+                
               </div>
             </li>
           </ul>

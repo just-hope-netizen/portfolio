@@ -19,7 +19,8 @@ function Footer() {
             <Link
               to='/'
               onClick={() => {
-                footer.scrollTo(0);
+                // footer.scrollTop(0);
+                window.scrollTo(0, 0)
               }}
             >
               home
@@ -34,7 +35,9 @@ function Footer() {
             <Link
               to='/projects'
               onClick={() => {
-                footer.scrollTo(0);
+               
+                window.scrollTo(0, 0)
+                // footer.scrollTop(0);
               }}
             >
               projects

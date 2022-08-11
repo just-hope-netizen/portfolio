@@ -15,12 +15,12 @@ function App() {
   function toggleTheme() {
     setTheme((curr) => curr === 'light' ? 'dark' : 'light')
   }
+
   return (
     <>
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
         <div id={theme}>
-          <Header switch={toggleTheme} checked={theme === 'dark'}/>
-        
+          <Header switch={toggleTheme} checked={theme === 'dark'} />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/Projects' element={<Projects />} />

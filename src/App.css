@@ -1,7 +1,3 @@
-#dark {
-  background-color: #121212;
-  background-image: url('./assets/svg/bg-stars.svg');
-}
 
 .main {
   padding-top: 200px;
@@ -152,20 +148,21 @@ background-color: #463e3e;
 }
 
 .project__logo-img {
-  height: 60px;
+  height: inherit;
+  width: 100%;
 }
 .project__info {
   padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 .feature-project {
   border: 1px solid;
   border-radius: 8px;
-  /* background-color: #fafafa; */
 }
 #dark .feature-project,
 #dark .feature-project > span {
-  /* background-color: #6c757d; */
-  /* color: rgb(228, 217, 217); */
+ 
   border-color: #fafafa;
 }
 
@@ -245,6 +242,13 @@ background-color: #463e3e;
 }
 .email-wrapper{
   margin-left: 25px;
+}
+.tool-used{
+  border: 1px solid;
+  padding:3px  5px ;
+  font-size: 12px;
+  border-radius: 12px;
+  margin: 2px;
 }
 /* refactor */
 .thanks-container{

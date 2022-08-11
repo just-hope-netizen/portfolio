@@ -1,10 +1,28 @@
+#dark {
+  background: black url('../assets/svg/bg-stars.svg') repeat 5% 5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: star-move 20s linear infinite;
+}
+@keyframes star-move {
+  from {
+    background-position: 5% 5%;
+  }
+  to {
+    background-position: 1300% 600%;
+  }
+}
 .degree {
   position: absolute;
   left: 210px;
   transform-origin: 50% 220px;
   cursor: pointer;
 }
-#light, #dark{
+#light,
+#dark {
   overflow-x: hidden;
 }
 .main-circle {
@@ -129,8 +147,8 @@
   position: absolute;
   top: calc(50% - 10px);
   left: calc(50% - 10px);
-  border: 3px solid #f3f3f3; 
-  border-top: 3px solid #3498db; 
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -138,22 +156,25 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-.arrow-icon{
-    animation-name: forward;
-    animation-duration: 0.5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-  }
+.arrow-icon {
+  animation-name: forward;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
 
-  @keyframes forward {
-    0%{
-      margin-left: 1rem;
-    }
-    100%{
-      margin-left: 2rem;
-    }
-
+@keyframes forward {
+  0% {
+    margin-left: 1rem;
   }
+  100% {
+    margin-left: 2rem;
+  }
+}
