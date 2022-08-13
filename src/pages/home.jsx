@@ -12,7 +12,7 @@ function Home() {
         <small>Hi, my name is</small>
         <h1>Hope Peter,</h1>
         <p className='intro'>
-          I am a Software Engineer who I build high-functional, user friendly,
+          I'm a Software Engineer who builds high-functional, user friendly,
           accessible, flexible, mobile responsive & custom website for my
           employer. I specialise in interface development and functionality in
           web-based applications with a focus on simplicity & usability.
