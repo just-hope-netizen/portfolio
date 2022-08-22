@@ -21,7 +21,9 @@ function Header(props) {
           <div className='col-9 d-flex align-items-center justify-content-end'>
             <div className='row d-flex align-items-center justify-content-end '>
               <div className='col-7'>
-                <Nav />
+                <Nav onClick={()=>{
+                  window.scrollTo(0, 0)
+                }}/>
               </div>
               <div className='col-2 d-flex align-items-center me-4'>
                 <div>
