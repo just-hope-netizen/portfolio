@@ -14,7 +14,7 @@ import {
     function TechStack() {
     const [stackName, setStackName] = useState('react');
 
-    return (  <div className=' px-3 pb-5  container'>
+    return (  <div className=' px-3 pb-5 mt-4 container'>
       <div className='row'>
         <h5>TECH STACK:</h5>
         <div className='main-circle  col-12'>

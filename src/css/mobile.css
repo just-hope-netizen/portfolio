@@ -1,18 +1,13 @@
-@media (max-width: 854px) {
-  li.project {
-    width: 47%;
-  }
-}
 @media (max-width: 630px) {
   div.menu-container {
     display: flex;
     justify-content: space-between;
     z-index: 1;
   }
-  div.pc-header {
+  div.pc-header, .desk__backdrop {
     display: none;
   }
- header#top-bar{
+  header#top-bar {
     display: block;
   }
   main.main {
@@ -26,11 +21,10 @@
     background-color: #fff;
   }
   #dark .menu {
-  background-color: rgb(19, 17, 17);
-
+    background-color: rgb(19, 17, 17);
   }
   .menu {
-    top:51px;
+    top: 51px;
     left: 100%;
     transition: left 1s;
   }
@@ -43,15 +37,15 @@
     right: 1rem;
     z-index: 1;
   }
-  
+
   .focus {
     background: none !important;
     border-bottom: 2px solid #222;
   }
-  
+
   .backdrop {
     position: fixed;
-    top:51px;
+    top: 51px;
     bottom: 0;
     right: 100%;
     left: 0;
@@ -74,35 +68,41 @@
     box-shadow: none;
     transform: none;
   }
+  div.project__info {
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 425px) {
-.main-circle {
-  width: 300px;
-  height: 300px;
-}
-.services-container{
-  top: 300px;
-}
-.degree {
-  left: 130px;
-  transform-origin: 50% 150px;
-}
-.form-name-email{
-  flex-direction: column;
-}
-
-div.email-wrapper{
-  margin: 20px 0 0 0;
-}
-div.project__info{
-  padding: 0;
-}
+  .main-circle {
+    width: 300px;
+    height: 300px;
+  }
+  .services-container {
+    top: 300px;
+  }
+  .degree {
+    left: 130px;
+    transform-origin: 50% 150px;
+  }
+  .form-name-email {
+    flex-direction: column;
+  }
+  .project__logo-img {
+    object-fit: cover;
+  }
+  div.email-wrapper {
+    margin: 20px 0 0 0;
+  }
+  div.project__info {
+    padding: 0;
+  }
 }
 @media (max-width: 320px) {
-  h5{
+  h5 {
     font-size: 18px;
   }
- 
 }
-

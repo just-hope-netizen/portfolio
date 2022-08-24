@@ -1,9 +1,8 @@
-
 .main {
   padding-top: 200px;
 }
 #dark {
-  background: black url('./assets/svg/bg-stars.svg') ;
+  background: black url('./assets/svg/bg-stars.svg');
 }
 #top-bar {
   border-bottom: 1px solid #eaeaea;
@@ -11,10 +10,9 @@
   display: flex;
   justify-content: center;
 }
-.pc-header{
+.pc-header {
   max-width: 1440px;
   width: 100%;
-
 }
 #light #top-bar,
 #light svg {
@@ -39,8 +37,6 @@
 #dark label,
 #dark .work-link,
 #dark .skill-heading,
-#dark .feature-projects-heading,
-#dark .projects-heading,
 #dark .footer-heading,
 #dark h5 {
   color: #fff;
@@ -52,7 +48,7 @@
 #light .logo-container > svg {
   color: #000;
 }
-#light .projects-container{
+#light .projects-container {
   background-color: #ced3d8;
 }
 
@@ -67,21 +63,21 @@
   font-size: 14px;
 }
 .mail-link:hover,
-#light .focus{
+#light .focus {
   color: #6c757d;
   background-color: #121212;
   font-weight: bold;
 }
-.nav-item-link:hover{
+.nav-item-link:hover {
   color: #6c757d;
-background-color: #463e3e;
+  background-color: #463e3e;
 }
 #dark .focus,
 #dark .mail-link:hover {
   background-color: #fff;
 }
 
-#dark .nav-item-link:hover{
+#dark .nav-item-link:hover {
   background-color: #eee5e5;
 }
 .intro {
@@ -107,23 +103,19 @@ background-color: #463e3e;
 }
 
 .project {
+  position: relative;
   height: 300px;
-  width: 32%;
-  border-radius: 0.2rem;
-  /* background-color: #fff; */
-  box-shadow: 0px 8px 6px -6px;
-  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  transition-property: transform, box-shadow;
-}
-.project:hover {
-  transform: translate(0px, -10px);
-  box-shadow: 2px 4px 4px 2px;
+  width: 48%;
+  cursor: pointer;
+  overflow: hidden;
 }
 
-.project__logo {
-  background: rgba(245, 244, 252, 0.62);
+.project,
+.project__logo-img,
+.project__overlay {
+  border-radius: 0.9rem;
 }
-.project__logo,
+
 .contact-form,
 .form-name-email {
   display: flex;
@@ -135,44 +127,75 @@ background-color: #463e3e;
   max-width: 500px;
   margin: auto;
 }
-.contact-heading{
+.contact-heading {
   font-weight: 600;
 }
-
-.project__logo-wrapper {
+.project__about {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  right: 0;
+  bottom: 0;
   display: flex;
-  align-items: center;
-  height: 180px;
+  transition: all 1s;
 }
-#light .project__logo-wrapper > svg,
-#dark .project__logo-wrapper > svg {
-  color: #000;
-  background: none;
+.project__about.slide {
+  left: 0;
 }
-
+.about__content {
+  background-color: #fff;
+  max-width: 40rem;
+  width: 100%;
+  padding: 2rem 2rem 4rem;
+  z-index: 5;
+  overflow-y: auto;
+  position: relative;
+}
+#dark .about__content{
+  background: black url('./assets/svg/bg-stars.svg');
+}
+.visit__btn {
+ background-color: #353e47;
+ color: #fff;
+}
+.visit__btn:hover{
+  color: #fff;
+}
 .project__logo-img {
   height: inherit;
   width: 100%;
 }
+.desk__backdrop {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
 .project__info {
-  padding: 10px ;
+  padding: 10px;
+  text-align: center;
+  color: #f0ecec;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  position: absolute;
+  top: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transition: top 1s;
+}
+.project__info.active {
+  top: 0;
   display: flex;
-  flex-wrap: wrap;
-}
-.feature-project {
-  border: 1px solid;
-  border-radius: 8px;
-}
-#dark .feature-project,
-#dark .feature-project > span {
- 
-  border-color: #fafafa;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 
-.feature-project:hover {
-  background-color: #f7f7f7;
-  border-color: #d9d9d9;
-}
 /*  */
 .github-link,
 .git-icon,
@@ -192,7 +215,6 @@ background-color: #463e3e;
   font-weight: bold;
 }
 
-
 .soft-skill {
   margin: 10px 0;
   list-style: square;
@@ -206,7 +228,7 @@ background-color: #463e3e;
   padding: 1rem;
   height: 100%;
 }
-#dark .s-card{
+#dark .s-card {
   border-color: #fafafa;
 }
 .s-icon-wrap {
@@ -243,18 +265,20 @@ background-color: #463e3e;
 .inactive-btn {
   opacity: 0.5;
 }
-.email-wrapper{
+.email-wrapper {
   margin-left: 25px;
 }
-.tool-used{
-  border: 1px solid;
-  padding:3px  5px ;
+.tool-used {
+  border: 1px solid #565c61;
+  padding: 3px 5px;
   font-size: 12px;
   border-radius: 12px;
   margin: 2px;
+  color: #fff;
+  background-color: #565c61;
 }
 /* refactor */
-.thanks-container{
+.thanks-container {
   height: 100vh;
 }
 .divider {

@@ -19,8 +19,7 @@ function Footer() {
             <Link
               to='/'
               onClick={() => {
-                // footer.scrollTop(0);
-                window.scrollTo(0, 0)
+                window.scrollTo(0, 0);
               }}
             >
               home
@@ -35,9 +34,7 @@ function Footer() {
             <Link
               to='/projects'
               onClick={() => {
-               
-                window.scrollTo(0, 0)
-                // footer.scrollTop(0);
+                window.scrollTo(0, 0);
               }}
             >
               projects
@@ -53,9 +50,13 @@ function Footer() {
       <span className='divider mb-4'></span>
       <span>© Hope Peter 2022</span>
 
-      <a href='./hope-peter.pdf' download={true} className='ms-2'>
+      <a
+        href='https://drive.google.com/file/d/1s2KlYRdShZANUCJbna7tppsHFjoAOqvS/view?usp=sharing'
+        rel='noopener noreferrer'
+        className='ms-2'
+      >
         {' '}
-        resume <DownloadIcon />
+        Resumé <DownloadIcon />
       </a>
     </footer>
   );
