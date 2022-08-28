@@ -7,6 +7,9 @@
   div.pc-header, .desk__backdrop {
     display: none;
   }
+  .project__logo-img {
+    object-fit: cover;
+  }
   header#top-bar {
     display: block;
   }
@@ -90,9 +93,6 @@
   }
   .form-name-email {
     flex-direction: column;
-  }
-  .project__logo-img {
-    object-fit: cover;
   }
   div.email-wrapper {
     margin: 20px 0 0 0;
