@@ -3,8 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { ArrowIcon, DownloadIcon } from '../assets/svg';
 
 function Footer() {
-  const footer = useRef()
- const location = useLocation()
+  const footer = useRef();
+  const location = useLocation();
 
   return (
     <footer className='mt-5 py-5 container ' ref={footer}>
@@ -51,12 +51,12 @@ function Footer() {
       <span>© Hope Peter 2022</span>
 
       <a
-        href='https://drive.google.com/file/d/1s2KlYRdShZANUCJbna7tppsHFjoAOqvS/view?usp=sharing'
+        href='https://drive.google.com/file/d/1Ia6xjZFEXn7RGoJhV27rHqFc1_272EKZ/view?usp=sharing'
         rel='noopener noreferrer'
         className='ms-2'
       >
         {' '}
-        Resumé <DownloadIcon />
+        Resumé <DownloadIcon />{' '}
       </a>
     </footer>
   );
