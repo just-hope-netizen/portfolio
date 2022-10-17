@@ -4,6 +4,7 @@ import './App.css';
 import Footer from './components/footer';
 import Header from './components/header';
 import { ThemeContext } from './context/theme';
+import Admin from './pages/admin';
 import Contact from './pages/contact';
 import Home from './pages/home';
 import Projects from './pages/projects';
@@ -26,6 +27,7 @@ function App() {
             <Route path='/Projects' element={<Projects />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/thanks' element={<Thanks />} />
+            <Route path='/admin' element={<Admin />} />
           </Routes>
           <Footer />
         </div>
