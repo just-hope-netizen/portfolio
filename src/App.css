@@ -277,6 +277,15 @@
   color: #fff;
   background-color: #565c61;
 }
+.input-container{
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+}
+.input-label{
+  font-size: 16px;
+}
+
 /* refactor */
 .thanks-container {
   height: 100vh;

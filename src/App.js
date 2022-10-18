@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './components/footer';
 import Header from './components/header';
-import { ThemeContext } from './context/theme';
+import { ThemeContext } from './helpers/context';
 import Admin from './pages/admin';
 import Contact from './pages/contact';
 import Home from './pages/home';
@@ -17,11 +17,14 @@ function App() {
     setTheme((curr) => curr === 'light' ? 'dark' : 'light')
   }
 
+
+
   return (
     <>
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
         <div id={theme}>
-          <Header switch={toggleTheme} checked={theme === 'dark'} />
+          <Header
+          />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/Projects' element={<Projects />} />

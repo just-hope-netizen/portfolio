@@ -34,18 +34,5 @@ export const uploadImage = async (data) => {
     }
 }
 
-// export const getImage = async (data) => {
-//     try {
-//         const upload = await fetch('https://api.cloudinary.com/v1_1/dz14l6crq/image/upload', {
-//             method: 'POST',
-//             body: data,
-//         })
 
-//         const res = upload.json()
-//         return res
-
-//     } catch (e) {
-//         return e
-//     }
-// }
 
