@@ -1,4 +1,4 @@
-import { collection, addDoc, getDocs } from "firebase/firestore";
+import { addDoc, collection, doc, getDocs, updateDoc } from "firebase/firestore";
 import { db } from '../config/firestore';
 
 
@@ -13,6 +13,15 @@ export const addData = async (data) => {
 export const getData = async () => {
     try {
         const docRef = await getDocs(collection(db, "projects"))
+        return docRef
+    } catch (e) {
+        return e
+    }
+}
+
+export const updateData = async (data, id) => {
+    try {
+        const docRef = await updateDoc(doc(db, "projects", id), data, { merge: true })
         return docRef
     } catch (e) {
         return e

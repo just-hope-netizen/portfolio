@@ -1,8 +1,11 @@
+import { useContext } from 'react';
 import ReactSwitch from 'react-switch';
 import { MoonIcon, SunIcon } from '../assets/svg';
+import { ThemeContext } from '../helpers/context';
 import Nav from './nav';
 
 function Menu(props) {
+ const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <div
@@ -15,13 +18,13 @@ function Menu(props) {
           <SunIcon />
         </div>
         <ReactSwitch
-          onChange={props.onClick}
+          onChange={toggleTheme}
           onColor={'#ddd'}
           onHandleColor={'#000'}
           uncheckedIcon={true}
           checkedIcon={true}
           height={15}
-          checked={props.checked}
+          checked={theme === 'dark'}
           className='mx-2'
         />
         <div>

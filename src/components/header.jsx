@@ -3,9 +3,11 @@ import ReactSwitch from 'react-switch';
 import { Logo, MoonIcon, SunIcon } from '../assets/svg';
 import MobileHeader from './mobile-header';
 import Nav from './nav';
+import { useContext } from 'react';
+import { ThemeContext } from '../helpers/context';
 
-function Header(props) {
- 
+function Header() {
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <>
@@ -30,13 +32,13 @@ function Header(props) {
                   <SunIcon />
                 </div>
                 <ReactSwitch
-                  onChange={props.switch}
+                  onChange={toggleTheme}
                   onColor={'#ddd'}
                   onHandleColor={'#000'}
                   uncheckedIcon={true}
                   checkedIcon={true}
                   height={15}
-                  checked={props.checked}
+                  checked={theme === 'dark'}
                   className='mx-2'
                 />
                 <div>
@@ -48,8 +50,8 @@ function Header(props) {
         </div>
         <MobileHeader
           className={`menu-container `}
-          onClick={props.switch}
-          checked={props.checked}
+          // onClick={props.switch}
+          // checked={props.checked}
         />
       </header>
     </>

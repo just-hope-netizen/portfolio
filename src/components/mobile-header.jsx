@@ -9,12 +9,11 @@ function MobileHeader(props) {
 
   function closeMenu() {
     setMenu(false);
-                window.scrollTo(0, 0);
-
-    
+    window.scrollTo(0, 0);
   }
+  
   return (
-    <div className={props.className} >
+    <div className={props.className}>
       <Link to='/' className='col-3 logo-container'>
         <Logo />
       </Link>
@@ -27,12 +26,7 @@ function MobileHeader(props) {
       >
         {menu ? <CloseMenuIcon /> : <MenuIcon />}
       </button>
-      <Menu
-        close={closeMenu}
-        className={menu && 'menu slide'}
-        onClick={props.onClick}
-        checked={props.checked}
-      />
+      <Menu close={closeMenu} className={menu && 'menu slide'} />
       <Backdrop onClick={closeMenu} className={menu && 'backdrop slide'} />
     </div>
   );

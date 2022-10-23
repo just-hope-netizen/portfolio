@@ -50,8 +50,6 @@ function Home() {
         <span className='divider my-5 px-sm-1'></span>
         <TechStack />
         <span className='divider my-5 px-sm-1'></span>
-
-       
       </div>
 
       <Contact className={true} />

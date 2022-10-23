@@ -285,7 +285,9 @@
 .input-label{
   font-size: 16px;
 }
-
+.edit-project{
+  cursor: default;
+}
 /* refactor */
 .thanks-container {
   height: 100vh;
