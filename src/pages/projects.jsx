@@ -1,19 +1,16 @@
-import { collection, getDocs } from 'firebase/firestore';
 import { useState } from 'react';
 import Project from '../components/project';
 import Services from '../components/services';
 import SkillsExperience from '../components/skills-experience';
-import { db } from '../config/firestore';
 
-import {
-  useQuery
-} from '@tanstack/react-query';
+import { useQueryClient } from '@tanstack/react-query';
 
 function Projects() {
   const [className, setClassName] = useState();
   const [project, setProject] = useState();
 
-
+  const queryClient = useQueryClient();
+  const data = queryClient.getQueryData(['projects']);
   
   function setClass(className) {
     setClassName(className);
@@ -30,16 +27,7 @@ function Projects() {
     setProject();
   }
   
-  const { isLoading, error, data } = useQuery(['projects'], () =>
 
-    getDocs(collection(db, 'projects')).then(res =>
-      res.docs.map(doc => ({...doc.data(), id: doc.id})))
-  
-  );
-
- if (isLoading) return 'Loading...';
-
- if (error) return 'An error has occurred: ' + error.message;
 
   return (
     <>
