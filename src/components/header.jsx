@@ -1,13 +1,12 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import ReactSwitch from 'react-switch';
 import { Logo, MoonIcon, SunIcon } from '../assets/svg';
+import { ThemeContext } from '../helpers/context';
 import MobileHeader from './mobile-header';
 import Nav from './nav';
-import { useContext } from 'react';
-import { ThemeContext } from '../helpers/context';
 
 function Header() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { toggleTheme, theme } = useContext(ThemeContext);
 
   return (
     <>
@@ -23,36 +22,31 @@ function Header() {
           <div className='col-9 d-flex align-items-center justify-content-end'>
             <div className='row d-flex align-items-center justify-content-end '>
               <div className='col-7'>
-                <Nav onClick={()=>{
-                  window.scrollTo(0, 0)
-                }}/>
-              </div>
-              <div className='col-2 d-flex align-items-center me-4'>
-                <div>
-                  <SunIcon />
-                </div>
-                <ReactSwitch
-                  onChange={toggleTheme}
-                  onColor={'#ddd'}
-                  onHandleColor={'#000'}
-                  uncheckedIcon={true}
-                  checkedIcon={true}
-                  height={15}
-                  checked={theme === 'dark'}
-                  className='mx-2'
+                <Nav
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
                 />
-                <div>
-                  <MoonIcon />
-                </div>
               </div>
+              <button className='col-2 d-flex align-items-center me-4 cursor'>
+                {theme === 'light' ? (
+                  <MoonIcon
+                    onClick={() => {
+                      toggleTheme();
+                    }}
+                  />
+                ) : (
+                  <SunIcon
+                    onClick={() => {
+                      toggleTheme();
+                    }}
+                  />
+                )}
+              </button>
             </div>
           </div>
         </div>
-        <MobileHeader
-          className={`menu-container `}
-          // onClick={props.switch}
-          // checked={props.checked}
-        />
+        <MobileHeader className={`menu-container `} />
       </header>
     </>
   );

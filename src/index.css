@@ -24,12 +24,15 @@ a {
 li {
   list-style-type: none;
 }
-button, input, textarea{
+button,
+input,
+textarea {
   background: none;
   border: none;
   outline: none;
 }
-input, textarea{
+input,
+textarea {
   width: 100%;
   background-color: lightgray;
   border-radius: 5px;
@@ -38,9 +41,8 @@ input, textarea{
 textarea {
   resize: none;
   border-bottom: 1px solid;
-
 }
-label{
+label {
   font-size: 13px;
 }
 /* safari  100vh workaround */

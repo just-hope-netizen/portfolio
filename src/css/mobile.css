@@ -16,8 +16,8 @@
   main.main {
     padding-top: 120px;
   }
-  .nav-item,
-  .switch-container.mobile {
+  .nav-item
+  {
     margin: 20px;
   }
   #light .menu {

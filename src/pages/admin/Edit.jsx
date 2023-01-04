@@ -4,8 +4,9 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { useNavigate } from 'react-router-dom';
-import Input from '../components/Input';
-import { updateData } from '../helpers/api';
+import Input from '../../components/Input';
+import NavigateBack from '../../components/NavigateBack';
+import { updateData } from '../../helpers/api';
 
 function Edit() {
   const [pId, setPId] = useState();
@@ -52,7 +53,8 @@ function Edit() {
 
   return (
     <>
-      <main className='projects-container main container-fluid mb-5 pb-5'>
+      <main className='projects-container main container-fluid mb-5 pb-5 px-md-5'>
+        <NavigateBack backRoute={'/admin'} />
         <section className=' container-lg  projects d-flex  flex-wrap justify-content-between align-items-center px-3 '>
           {data?.map((item) => (
             <div key={item.id} className='project mb-4 edit-project'>
