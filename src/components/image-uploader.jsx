@@ -5,10 +5,11 @@ const ImageUploader = (props) => {
 
   const getImage = () => {
     const data = new FormData();
+    console.log(image);
     data.append('file', image);
     data.append('upload_preset', 'portfolio');
     data.append('cloud_name', 'dz14l6crq');
-
+    console.log(data);
     props.parentFunc(data);
   };
 
@@ -19,13 +20,12 @@ const ImageUploader = (props) => {
         <input
           type='file'
           className='p-2'
-          onChange={e => 
-            setImage(e.target.files[0])
-          }
+          onChange={(e) => setImage(e.target.files[0])}
         ></input>
-        <button onClick={getImage} className='btn btn-primary mt-3'>Upload</button>
+        <button onClick={getImage} className='btn btn-primary mt-3'>
+          Upload
+        </button>
       </div>
-      
     </div>
   );
 };

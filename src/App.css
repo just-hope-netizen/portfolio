@@ -17,6 +17,16 @@
 .list-group {
   max-width: 500px;
 }
+.list-group-item:hover,
+.list-group-item > a:hover {
+  background-color: #121212;
+  color: #fff;
+}
+#dark .list-group-item:hover,
+#dark .list-group-item > a:hover {
+  background-color: #fafafa;
+  color: #353e47;
+}
 #light #top-bar,
 #light svg {
   color: #6c757d;

@@ -7,6 +7,8 @@ function Home() {
   return (
     <main className='main container px-md-5'>
       <div className='row mx-md-5 pb-5'>
+        <TechStack />
+        <span className='divider my-5 px-sm-1'></span>
         <small>Hi, my name is</small>
         <h1>Hope Peter,</h1>
         <p className='intro'>
@@ -47,8 +49,6 @@ function Home() {
           </ul>
         </div>
 
-        <span className='divider my-5 px-sm-1'></span>
-        <TechStack />
         <span className='divider my-5 px-sm-1'></span>
       </div>
 

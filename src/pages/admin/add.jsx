@@ -1,4 +1,5 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import { Button, Modal } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import ImageUploader from '../../components/image-uploader';
 import Input from '../../components/Input';
@@ -7,11 +8,32 @@ import { uploadImage, addData } from '../../helpers/api';
 
 function Add() {
   const navigate = useNavigate();
+  const [show, setShow] = useState(false);
+  const [error, setError] = useState(false);
+
+  const handleClose = () => {
+    setShow(false);
+    setError(false);
+  };
+  const handleShow = () => setShow(true);
   const titleRef = useRef();
   const descRef = useRef();
   const siteRef = useRef();
   const introRef = useRef();
   const toolsRef = useRef();
+  const accessRef = useRef();
+
+  const verifyUser = (data) => {
+    if (
+      accessRef.current.value.toLowerCase() ===
+      process.env.REACT_APP_ACCESS_CODE
+    ) {
+      createProject(data);
+    } else {
+      setError(true);
+      accessRef.current.style.border = '1px solid red';
+    }
+  };
 
   function createProject(data) {
     const title = titleRef.current.value;
@@ -66,11 +88,30 @@ function Add() {
           <textarea ref={descRef} rows='7' className='p-2'></textarea>
         </div>
         <ImageUploader
-          parentFunc={createProject}
+          parentFunc={handleShow}
           placeholder={'Image'}
           className='input-label'
         />
       </div>
+      {show && (
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Add project</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Input label={'Accesscode'} refer={accessRef} type={'text'} />
+            {error && <span className='text-danger'>Wrong code! </span>}
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant='secondary' onClick={handleClose}>
+              Cancel
+            </Button>
+            <Button variant='primary' onClick={verifyUser}>
+              Save Changes
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      )}
     </main>
   );
 }
