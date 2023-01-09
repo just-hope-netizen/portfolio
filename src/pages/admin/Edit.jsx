@@ -11,6 +11,8 @@ import { updateData } from '../../helpers/api';
 function Edit() {
   const [pId, setPId] = useState();
   const [show, setShow] = useState(false);
+  const [error, setError] = useState(false);
+  const [acc, setAcc] = useState(false);
   const navigate = useNavigate();
 
   const handleClose = () => setShow(false);
@@ -21,15 +23,22 @@ function Edit() {
   const siteRef = useRef();
   const introRef = useRef();
   const toolsRef = useRef();
-
+  const accessRef = useRef();
   // get query data
   const queryClient = useQueryClient();
   const data = queryClient.getQueryData(['projects']);
 
-  function pickId(id) {
-    setPId(id);
-    handleShow();
-  }
+  const verifyUser = () => {
+    if (
+      accessRef.current.value.toLowerCase() ===
+      process.env.REACT_APP_ACCESS_CODE
+    ) {
+      setAcc(true);
+    } else {
+      setError(true);
+      accessRef.current.style.border = '1px solid red';
+    }
+  };
 
   function handleSave(id) {
     const title = titleRef.current.value;
@@ -48,7 +57,7 @@ function Edit() {
 
     updateData(data, id);
     alert('Project added!');
-    navigate('/project');
+    navigate('/projects');
   }
 
   return (
@@ -59,7 +68,13 @@ function Edit() {
           {data?.map((item) => (
             <div key={item.id} className='project mb-4 edit-project'>
               <div className='position-absolute bg-light '>
-                <button className='btn' onClick={() => pickId(item.id)}>
+                <button
+                  className='btn'
+                  onClick={() => {
+                    setPId(item.id);
+                    handleShow();
+                  }}
+                >
                   Edit
                 </button>
 
@@ -116,15 +131,25 @@ function Edit() {
                     className='p-2'
                   ></textarea>
                 </div>
+                <Input label={'Accesscode'} refer={accessRef} type={'text'} />
+                {error && <span className='text-danger'>Wrong code! </span>}
               </Modal.Body>
-              <Modal.Footer>
-                <Button variant='secondary' onClick={handleClose}>
-                  Close
-                </Button>
-                <Button variant='primary' onClick={() => handleSave(item.id)}>
-                  Save Changes
-                </Button>
-              </Modal.Footer>
+              {acc ? (
+                <Modal.Footer>
+                  <Button variant='secondary' onClick={handleClose}>
+                    Cancel
+                  </Button>
+                  <Button variant='primary' onClick={() => handleSave(item.id)}>
+                    Save Changes
+                  </Button>
+                </Modal.Footer>
+              ) : (
+                <Modal.Footer>
+                  <Button variant='primary' onClick={verifyUser}>
+                    Upload
+                  </Button>
+                </Modal.Footer>
+              )}
             </Modal>
           ))}
     </>
