@@ -10,12 +10,8 @@ function Add() {
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const [error, setError] = useState(false);
+  const [image, setImage] = useState('');
 
-  const handleClose = () => {
-    setShow(false);
-    setError(false);
-  };
-  const handleShow = () => setShow(true);
   const titleRef = useRef();
   const descRef = useRef();
   const siteRef = useRef();
@@ -23,7 +19,19 @@ function Add() {
   const toolsRef = useRef();
   const accessRef = useRef();
 
-  const verifyUser = (data) => {
+  const handleClose = () => {
+    setShow(false);
+    setError(false);
+  };
+
+  const handleShow = () => setShow(true);
+
+  const verifyUser = () => {
+    const data = new FormData();
+    data.append('file', image);
+    data.append('upload_preset', 'portfolio');
+    data.append('cloud_name', 'dz14l6crq');
+
     if (
       accessRef.current.value.toLowerCase() ===
       process.env.REACT_APP_ACCESS_CODE
@@ -35,7 +43,7 @@ function Add() {
     }
   };
 
-  function createProject(data) {
+  const createProject = (data) => {
     const title = titleRef.current.value;
     const desc = descRef.current.value;
     const site = siteRef.current.value;
@@ -61,7 +69,7 @@ function Add() {
         }
       });
     });
-  }
+  };
 
   return (
     <main className='main container px-md-5'>
@@ -87,11 +95,16 @@ function Add() {
           <label className='input-label'>Description</label>
           <textarea ref={descRef} rows='7' className='p-2'></textarea>
         </div>
+
         <ImageUploader
-          parentFunc={handleShow}
+          state={setImage}
           placeholder={'Image'}
           className='input-label'
         />
+
+        <Button variant='primary' onClick={handleShow} className='mt-3'>
+          Save
+        </Button>
       </div>
       {show && (
         <Modal show={show} onHide={handleClose}>
@@ -107,7 +120,7 @@ function Add() {
               Cancel
             </Button>
             <Button variant='primary' onClick={verifyUser}>
-              Save Changes
+              Upload
             </Button>
           </Modal.Footer>
         </Modal>
