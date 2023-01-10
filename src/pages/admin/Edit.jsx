@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import Input from '../../components/Input';
 import NavigateBack from '../../components/NavigateBack';
 import { updateData } from '../../helpers/api';
+import Delete from './delete';
 
 function Edit() {
   const [pId, setPId] = useState();
@@ -34,6 +35,7 @@ function Edit() {
       process.env.REACT_APP_ACCESS_CODE
     ) {
       setAcc(true);
+      setError(false);
     } else {
       setError(true);
       accessRef.current.style.border = '1px solid red';
@@ -67,9 +69,9 @@ function Edit() {
         <section className=' container-lg  projects d-flex  flex-wrap justify-content-between align-items-center px-3 '>
           {data?.map((item) => (
             <div key={item.id} className='project mb-4 edit-project'>
-              <div className='position-absolute bg-light '>
+              <div className='position-absolute start-0 end-0 d-flex justify-content-between '>
                 <button
-                  className='btn'
+                  className='btn bg-light rounded-0'
                   onClick={() => {
                     setPId(item.id);
                     handleShow();
@@ -77,8 +79,7 @@ function Edit() {
                 >
                   Edit
                 </button>
-
-                {/* <button onClick={() => pickd(item.id)}>Delete</button> */}
+                <Delete />
               </div>
               <img
                 src={item.img}
