@@ -1,9 +1,14 @@
+import { useQueryClient } from '@tanstack/react-query';
+import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { GitLinkIcon } from '../assets/svg';
 import TechStack from '../components/tech-stack';
 import Contact from './contact';
 
 function Home() {
+  const queryClient = useQueryClient();
+  const data = queryClient.getQueryData(['projects']);
+
   return (
     <main className='main container px-md-5'>
       <div className='row mx-md-5 pb-5'>
@@ -27,7 +32,33 @@ function Home() {
           Outside of work my hobbies include playing video games, watching
           sci-fi shows & movies and experimenting with the latest tech.
         </p>
-
+        <header className='row text-center mt-4'>
+          <p className='page-header__desc h4'>Some projects I've worked on</p>
+        </header>
+        <div className='d-flex flex-wrap justify-content-center pb-4'>
+          {data?.slice(2, 4).map((i) => (
+            <Card style={{ width: '18rem', margin: '1rem' }} key={i.id}>
+              <Card.Img variant='top' src={i.img} />
+              <Card.Body>
+                <Card.Title>{i.title}</Card.Title>
+                <Card.Text>{i.intro}</Card.Text>
+                <a
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  href={i.site}
+                  className='visit__btn btn'
+                >
+                  Open project
+                </a>
+              </Card.Body>
+            </Card>
+          ))}
+        </div>
+        <div className='d-flex justify-content-center mb-4'>
+          <Link to={'/projects'} className='btn visit__btn '>
+            View all projects
+          </Link>
+        </div>
         <div className='home-links-list my-3'>
           <ul className='home-links d-flex justify-content-between align-items-center ps-0'>
             <li>
@@ -41,6 +72,7 @@ function Home() {
                 <GitLinkIcon className='git-link-icon' />
               </a>
             </li>
+
             <li>
               <Link to={'/contact'} className='mail-link'>
                 Email me
