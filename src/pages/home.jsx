@@ -1,4 +1,5 @@
 import { useQueryClient } from '@tanstack/react-query';
+import { useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { GitLinkIcon } from '../assets/svg';
@@ -6,6 +7,7 @@ import TechStack from '../components/tech-stack';
 import Contact from './contact';
 
 function Home() {
+  const [more, setMore] = useState();
   const queryClient = useQueryClient();
   const data = queryClient.getQueryData(['projects']);
 
@@ -20,18 +22,21 @@ function Home() {
           I'm a Software Engineer who builds high-functional, user friendly,
           accessible, flexible, mobile responsive & custom website for my
           employer. I specialise in interface development and functionality in
-          web-based applications with a focus on simplicity & usability.
+          web-based applications with a focus on simplicity & usability.{' '}
+          <span className='fw-bold' onClick={() => setMore(true)}>
+            {more ? '' : 'read more...'}
+          </span>
         </p>
-        <p className='intro'>
-          I'm passionate about design and functionality and how the two can be
-          use to create good user experience. I mostly work with Javascript, and
-          any new technologies as specified by my employers and clients. I enjoy
-          supporting Small/Medium Business with technology.
-        </p>
-        <p className='intro'>
-          Outside of work my hobbies include playing video games, watching
-          sci-fi shows & movies and experimenting with the latest tech.
-        </p>
+
+        {more && (
+          <p className='intro'>
+            I'm passionate about design and functionality and how the two can be
+            use to create good user experience. I mostly work with Javascript,
+            and any new technologies as specified by my employers and clients. I
+            enjoy supporting Small/Medium Business with technology.
+          </p>
+        )}
+
         <header className='row text-center mt-4'>
           <p className='page-header__desc h4'>Some projects I've worked on</p>
         </header>
