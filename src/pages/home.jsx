@@ -39,7 +39,7 @@ function Home() {
           <p className='intro'>
             I'm passionate about design and functionality and how the two can be
             use to create good user experience. I mostly work with Javascript,
-            and any new technologies as specified by my employers and clients. I
+            and any new technologies as specified by my clients. I
             enjoy supporting Small/Medium Business with technology.
           </p>
         )}
