@@ -1,4 +1,5 @@
 import { useQueryClient } from '@tanstack/react-query';
+import axios from 'axios';
 import { useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -11,8 +12,14 @@ function Home() {
   const queryClient = useQueryClient();
   const data = queryClient.getQueryData(['projects']);
 
+  const restApi = async () => {
+    const req = await axios.get('https://reqres.in/api/products/3', true);
+    console.log(req);
+  };
+
   return (
     <main className='main container px-md-5'>
+      <button onClick={restApi}>post</button>
       <div className='row mx-md-5 pb-5'>
         <TechStack />
         <span className='divider my-5 px-sm-1'></span>
