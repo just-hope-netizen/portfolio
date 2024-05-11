@@ -22,7 +22,7 @@ import Add from './pages/admin/add';
 
 function App() {
 
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState('dark')
 
 
   const { isLoading, error } = useQuery(['projects'], () =>
