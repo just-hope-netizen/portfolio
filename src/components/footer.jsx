@@ -6,6 +6,8 @@ function Footer() {
   const footer = useRef();
   const location = useLocation();
 
+  const currentDate = new Date();
+
   return (
     <footer className='mt-5 py-5 container ' ref={footer}>
       <div className='d-flex flex-column flex-md-row mb-4'>
@@ -48,7 +50,7 @@ function Footer() {
         </ul>
       </div>
       <span className='divider mb-4'></span>
-      <span>© Hope Peter 2023</span>
+      <span>© Hope Peter {currentDate.getFullYear()}</span>
 
       <a
         href='https://drive.google.com/file/d/1FoGGRsaRlGX6iOl0nmgrd_JLiaMvcFnz/view?usp=sharing'
